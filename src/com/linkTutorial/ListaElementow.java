@@ -1,6 +1,6 @@
 package com.linkTutorial;
 
-public class ListaElementow<T> {
+public class ListaElementow<T> implements ListaElementowInterfejs<T> {
     Elem<T> firstElement = null;
     
 //    private int size = 0;
@@ -9,13 +9,13 @@ public class ListaElementow<T> {
 //        size++;
         Elem<T> current = firstElement;
         if (current == null){
-            firstElement = new Elem<T>();
+            firstElement = new Elem<>();
             firstElement.setValue(value);
         } else {
             while (current.getNextElement() != null){
                 current = current.getNextElement();
             }
-            current.setNextElement(new Elem<T>());
+            current.setNextElement(new Elem<>());
             current.getNextElement().setValue(value);
         }
     }

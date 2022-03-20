@@ -1,13 +1,13 @@
 package com.linkTutorial;
 
-public class ListaElementowArray<T> {
+public class ListaElementowArray<T> implements ListaElementowInterfejs<T> {
     private static final int INITIAL_CAPACITY = 2;
     private Elem[] elements = new Elem[INITIAL_CAPACITY];
     private int capacity = INITIAL_CAPACITY;
     private int length = 0;
 
 
-    void add(T value) {
+    public void add(T value) {
         Elem<T> elem = new Elem<>();
         elem.setValue(value);
         if(length < capacity){
