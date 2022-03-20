@@ -76,5 +76,7 @@ public class Main {
             System.out.println(test5);
         }
 
+        Util<String> innyUtil = new Util<>();
+        System.out.println(innyUtil.getFirstElementValue(listaElementowArray).getValue());
     }
 }

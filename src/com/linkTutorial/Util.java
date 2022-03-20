@@ -8,7 +8,9 @@ public class Util<V> {
         }
         return result;
     }
-
+    Elem<V> getFirstElementValue(ListaElementowInterfejs<V> lista){
+        return lista.get(0);
+    }
     void makeSomeNoise(DajacyDzwiek rzecz){
         rzecz.makeNoise();
     }
