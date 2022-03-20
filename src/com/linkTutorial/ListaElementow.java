@@ -2,10 +2,11 @@ package com.linkTutorial;
 
 public class ListaElementow<T> {
     Elem<T> firstElement = null;
-    private int size = 0;
+    
+//    private int size = 0;
 
     public void add(T value){
-        size++;
+//        size++;
         Elem<T> current = firstElement;
         if (current == null){
             firstElement = new Elem<T>();
@@ -20,9 +21,15 @@ public class ListaElementow<T> {
     }
 
     public int length() {
-        return size;
+        Elem<T> current = firstElement;
+        int counter = 0;
+        while (current != null) {
+                current = current.getNextElement();
+                counter++;
+        }
+        return counter;
     }
-    
+
 
     public Elem<T> getFirstElement(){
         return firstElement;
