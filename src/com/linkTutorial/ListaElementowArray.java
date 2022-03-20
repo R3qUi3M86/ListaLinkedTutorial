@@ -24,6 +24,12 @@ public class ListaElementowArray<T> implements ListaElementowInterfejs<T> {
 
     }
 
+    @Override
+    public Elem<T> get(int index) {
+        if(index>=length()) return null;
+        return elements[index];
+    }
+
     public int length() {
         return length;
     }

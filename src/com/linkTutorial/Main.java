@@ -7,10 +7,13 @@ public class Main {
         ListaElementowInterfejs<String> mojaList = new ListaElementow<>();
         mojaList.add("Ala ma kota");
         mojaList.add("Lata pszczola");
-        mojaList.add("3");
+        mojaList.add("3tetete3");
         mojaList.add("4e");
         mojaList.add("5 element");
 
+        System.out.println(mojaList.get(0).getValue());
+        System.out.println(mojaList.get(1).getValue());
+        System.out.println(mojaList.get(2).getValue());
         ListaElementowInterfejs<String> emptyList = new ListaElementow<>();
         ListaElementowInterfejs<String> singleList = new ListaElementow<>();
         singleList.add("ONLY ONE");
@@ -25,6 +28,9 @@ public class Main {
         listaElementowArray.add("test2");
         listaElementowArray.add("test3");
 
+        System.out.println(listaElementowArray.get(0).getValue());
+        System.out.println(listaElementowArray.get(1).getValue());
+        System.out.println(listaElementowArray.get(2).getValue());
         System.out.println(listaElementowArray.length());
 
     }

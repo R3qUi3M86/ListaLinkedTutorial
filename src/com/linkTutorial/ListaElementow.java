@@ -20,6 +20,22 @@ public class ListaElementow<T> implements ListaElementowInterfejs<T> {
         }
     }
 
+    @Override
+    public Elem<T> get(int index) {
+        if(index>=length()) return null;
+        if(index==0) return firstElement;
+        Elem<T> current = firstElement.getNextElement();
+        int i = 1;
+        while(true){
+            if(index==i){
+                return current;
+            } else {
+                current = current.getNextElement();
+                i++;
+            }
+        }
+    }
+
     public int length() {
         Elem<T> current = firstElement;
         int counter = 0;
