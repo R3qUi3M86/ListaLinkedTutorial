@@ -1,10 +1,14 @@
 package com.linkTutorial;
 
-public class ListaElementowArray<T> implements ListaElementowInterfejs<T> {
+import java.util.Iterator;
+import java.util.function.Consumer;
+
+public class ListaElementowArray<T> implements ListaElementowInterfejs<T>, Iterable<T>, Iterator<T> {
     private static final int INITIAL_CAPACITY = 2;
-    private Elem[] elements = new Elem[INITIAL_CAPACITY];
+    private Elem<T>[] elements = new Elem[INITIAL_CAPACITY];
     private int capacity = INITIAL_CAPACITY;
     private int length = 0;
+    private int currentIteration = 0;
 
 
     public void add(T value) {
@@ -33,4 +37,21 @@ public class ListaElementowArray<T> implements ListaElementowInterfejs<T> {
     public int length() {
         return length;
     }
+
+    @Override
+    public boolean hasNext() {
+        return currentIteration<length;
+    }
+
+    @Override
+    public T next() {
+        return (elements[currentIteration++]).getValue();
+    }
+
+    @Override
+    public Iterator<T> iterator() {
+        currentIteration = 0;
+        return this;
+    }
+
 }
